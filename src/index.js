@@ -3,10 +3,10 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { hot } from 'react-hot-loader';
+import { Nav } from './components/Nav/Nav';
 
 ReactDOM.render(
-    <App />,
+    <Nav />,
   document.getElementById('root')
 );
 
