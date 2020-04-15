@@ -4,9 +4,14 @@ const myStles = makeStyles((theme) => ({
     grow: {
         flexGrow: 1,
     },
+    spacebetween: {
+        justifyContent: "space-between",
+    },
     navLink: {
         color: "seagreen",
-        margin: "0 30px 0 30px",
+        [theme.breakpoints.up("720")]: {
+            margin: "0 30px 0 30px",
+        },
         fontSize: "16px",
         textDecoration: "none",
     },
