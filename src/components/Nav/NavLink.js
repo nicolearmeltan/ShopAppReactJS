@@ -107,24 +107,22 @@ const NavLink = () => {
                     </SwipeableDrawer>
                 </div>
             ) : (
-                // <div className={styles.grow}>
-                    <ul>
+                <ul className={styles.navList}>
                     {linksDesktop.map((linkItems, index) => {
                         return (
-                            <li>
-                            {linkItems.icon}
-                            <Link
-                                to={linkItems.linkUrl}
-                                key={index}
-                                className={styles.navLink}
-                            >
-                                {linkItems.linkText}
-                            </Link>
+                            <li className={styles.navListItem}>
+                                {linkItems.icon}
+                                <Link
+                                    to={linkItems.linkUrl}
+                                    key={index}
+                                    className={styles.navLink}
+                                >
+                                    {linkItems.linkText}
+                                </Link>
                             </li>
                         );
                     })}
-                    </ul>
-                // </div>
+                </ul>
             )}
         </>
     );

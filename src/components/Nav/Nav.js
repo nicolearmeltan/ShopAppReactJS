@@ -1,14 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import IconButton from "@material-ui/core/IconButton";
-import Typography from "@material-ui/core/Typography";
 import Badge from "@material-ui/core/Badge";
-import MenuItem from "@material-ui/core/MenuItem";
-import Menu from "@material-ui/core/Menu";
-import AccountCircle from "@material-ui/icons/AccountCircle";
-import MailOutlineOutlinedIcon from '@material-ui/icons/MailOutlineOutlined';
 import AccountCircleOutlinedIcon from '@material-ui/icons/AccountCircleOutlined';
 import NotificationsOutlinedIcon from '@material-ui/icons/NotificationsOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
@@ -17,9 +12,9 @@ import { Contact } from "../Contact/Contact";
 import { Faqs } from "../Faqs/Faqs";
 import { Home } from "../Home/Home";
 import { Shop } from "../Shop/Shop";
-import history from "../../utils/history";
 import NavLink from "./NavLink";
 import myStles from "../../styles/styles";
+import SearchBar from "./SearchBar";
 
 const useStyles = makeStyles((theme) => ({
     grow: {
@@ -76,6 +71,7 @@ export const Nav = () => {
                 <AppBar position="static" color={"transparent"}>
                     <Toolbar className={styles.spacebetween}>
                         <NavLink />
+                        <SearchBar />
                         <div>
                             <IconButton
                                 aria-label="show 4 new mails"
